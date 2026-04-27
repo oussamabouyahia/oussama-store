@@ -5,7 +5,7 @@ import Image from "next/image";
 import { assets } from "../public/assets/assets";
 import HamX from "./HamX";
 
-export default function Navbar() {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -101,4 +101,4 @@ export default function Navbar() {
       </nav>
     </div>
   );
-}
+};
