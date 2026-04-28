@@ -67,11 +67,9 @@ const ProductDetails = ({ product }: { product: ProductParams | null }) => {
             </div>
             <p className="text-gray-600 mt-3">{product.description}</p>
             <p className="text-3xl font-medium mt-6">
-              {process.env.NEXT_PUBLIC_CURRENCY}
-              {product?.price}
+              {process.env.NEXT_PUBLIC_CURRENCY} {product?.price}
               <span className="text-base font-normal text-gray-800/60 line-through ml-2">
-                {process.env.NEXT_PUBLIC_CURRENCY}
-                {product?.offer_price}
+                {process.env.NEXT_PUBLIC_CURRENCY} {product?.offer_price}
               </span>
             </p>
             <hr className="bg-gray-600 my-6" />
@@ -125,7 +123,7 @@ const ProductDetails = ({ product }: { product: ProductParams | null }) => {
               </button>
               <Link
                 href={`/buy-now/${product.id}`}
-                className="w-full py-3.5 bg-[#043033] text-white hover:bg-black transition"
+                className="w-full py-3.5 bg-[#043033] text-white text-center hover:bg-black transition"
               >
                 Buy now
               </Link>
